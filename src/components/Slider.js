@@ -1,1 +1,2 @@
-// Write your Slider component here
+import React, { useState, useEffect } from "react";
+import axios from "axios";
