@@ -1,8 +1,8 @@
 import React from "react";
 import { Line } from "react-chartjs-2";
-import { Chart as Chartjs, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend } from "chart.js";
+import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend} from "chart.js";
 
-Chartjs.register(
+ChartJS.register(
     CategoryScale,
     LinearScale,
     PointElement,
@@ -12,22 +12,22 @@ Chartjs.register(
     Legend
 );
 
-const LineChart = ({ chartData }) => {
-    return (
+const LineChart=({chartData})=>{
+    return(
         <>
-            <Line 
-                data={chartData}
-                options={{
-                    scales: {
-                        x: {
-                            ticks: {
-                                autoSkip: true,
-                                maxTicksLimit: 10,
-                                maxRotation: 0,
-                            }
+            <Line
+            data={chartData}
+            options={{
+                scales:{
+                    x:{
+                        ticks:{
+                            autoskip: true,
+                            maxTicksLimit:10,
+                            maxRotation:0,
                         }
                     }
-                }}
+                }
+            }}
             />
         </>
     );
